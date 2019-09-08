@@ -259,7 +259,7 @@
                 
               
 
-              <time title="创建时间：2019-09-07 20:20:05 / 修改时间：22:03:36" itemprop="dateCreated datePublished" datetime="2019-09-07T20:20:05+08:00">2019-09-07</time>
+              <time title="创建时间：2019-09-07 20:20:05 / 修改时间：22:09:58" itemprop="dateCreated datePublished" datetime="2019-09-07T20:20:05+08:00">2019-09-07</time>
             </span>
           
             
@@ -306,11 +306,13 @@
 
       
           <p>本来计划在腾讯云上部署一个git服务器的，需要新建一个git账户，并且要配置这个账户sudo权限，然后问题就来了。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ sudo adduser git</span><br><span class="line">$ su git</span><br><span class="line">$ <span class="built_in">cd</span></span><br></pre></td></tr></table></figure>
+
 <p>首先碰到的第一个坑就是 <strong>/etc/sudoers</strong> 这个文件的修改。添加一个新的用户，如果需要通过sudo给一个用户全部的root权限，首先，需要修改这个文件的权限：</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span> sudo chmod 777 /etc/sudoers</span><br></pre></td></tr></table></figure>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> sudo chmod 777 /etc/sudoers</span></span><br></pre></td></tr></table></figure>
 
 <p>然后，编辑sudoers文件，添加新的账户：</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span> vim /etc/sudoers/</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span> 在文件末尾添加如下内容（ubuntu16系统中如下格式是没毛病的，</span><br><span class="line"><span class="meta">#</span> 将user替换为自己的新用户名）</span><br><span class="line">user ALL=(ALL:ALL) ALL</span><br></pre></td></tr></table></figure>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> vim /etc/sudoers/</span></span><br><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash"> 在文件末尾添加如下内容（ubuntu16系统中如下格式是没毛病的，</span></span><br><span class="line"><span class="meta">#</span><span class="bash"> 将user替换为自己的新用户名）</span></span><br><span class="line">user ALL=(ALL:ALL) ALL</span><br></pre></td></tr></table></figure>
           <!--noindex-->
           
             <div class="post-button text-center">
