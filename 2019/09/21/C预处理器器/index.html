@@ -66,7 +66,7 @@
 <meta property="og:site_name" content="新年的博客">
 <meta property="og:description" content="看着C Primer Plus 第16章，复习一下C预处理这一部分知识。 以前学习C语言的时候，对预处理器这一部分很是瞧不起，这有啥呢，无非就是在编译之前做一下字符串替换而已，没有什么技术含量啊。然而事实上是，技术无论好坏高低，能有效且快速解决各种实际问题的才会最终留到最后，C语言的预处理器就属于这种看起来low，但是实际用处非常大的一种功能。  预处理器不仅仅是做了符号替换，还可以根据要求包含">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-09-21T09:08:50.737Z">
+<meta property="og:updated_time" content="2019-09-21T09:11:20.009Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="C预处理器器">
 <meta name="twitter:description" content="看着C Primer Plus 第16章，复习一下C预处理这一部分知识。 以前学习C语言的时候，对预处理器这一部分很是瞧不起，这有啥呢，无非就是在编译之前做一下字符串替换而已，没有什么技术含量啊。然而事实上是，技术无论好坏高低，能有效且快速解决各种实际问题的才会最终留到最后，C语言的预处理器就属于这种看起来low，但是实际用处非常大的一种功能。  预处理器不仅仅是做了符号替换，还可以根据要求包含">
@@ -264,7 +264,7 @@
                 
               
 
-              <time title="创建时间：2019-09-21 17:08:30 / 修改时间：17:08:50" itemprop="dateCreated datePublished" datetime="2019-09-21T17:08:30+08:00">2019-09-21</time>
+              <time title="创建时间：2019-09-21 17:08:30 / 修改时间：17:11:20" itemprop="dateCreated datePublished" datetime="2019-09-21T17:08:30+08:00">2019-09-21</time>
             </span>
           
             
@@ -439,10 +439,11 @@
 <figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">if</span> __STDC_VERSION__ != 199901L</span></span><br><span class="line">    <span class="meta">#<span class="meta-keyword">error</span> Not C99</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">endif</span></span></span><br></pre></td></tr></table></figure>
 
 <ol start="3">
-<li>#pragma<br>可以用#pragma将编译器指令置于源代码中，例如可以启用对C9X的支持：<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">pragma</span> c9x on  <span class="comment">//c9x代表C99</span></span></span><br></pre></td></tr></table></figure>
-
-</li>
+<li>#pragma</li>
 </ol>
+<p>可以用#pragma将编译器指令置于源代码中，例如可以启用对C9X的支持：</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">pragma</span> c9x on  <span class="comment">//c9x代表C99</span></span></span><br></pre></td></tr></table></figure>
+
 <h1 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h1><p><a href="https://blog.csdn.net/wallying/article/details/83104290" target="_blank" rel="noopener">C语言宏中#、##运算符的使用</a></p>
 
     </div>
@@ -652,9 +653,6 @@
   
 
 
-    
-  
-  <script color='0,0,255' opacity='0.5' zIndex='-1' count='99' src="//cdn.jsdelivr.net/gh/theme-next/theme-next-canvas-nest@1/canvas-nest.min.js"></script>
   <script size="300" alpha="0.6" zIndex="-1" src="//cdn.jsdelivr.net/gh/theme-next/theme-next-canvas-ribbon@1/canvas-ribbon.js"></script>
   <script src="//cdn.jsdelivr.net/npm/animejs@3.1.0/lib/anime.min.js"></script>
   <script src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
