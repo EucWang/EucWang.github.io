@@ -61,14 +61,14 @@
   <meta name="description" content="看着C Primer Plus 第16章，复习一下C预处理这一部分知识。 以前学习C语言的时候，对预处理器这一部分很是瞧不起，这有啥呢，无非就是在编译之前做一下字符串替换而已，没有什么技术含量啊。然而事实上是，技术无论好坏高低，能有效且快速解决各种实际问题的才会最终留到最后，C语言的预处理器就属于这种看起来low，但是实际用处非常大的一种功能。  预处理器不仅仅是做了符号替换，还可以根据要求包含">
 <meta name="keywords" content="c语言">
 <meta property="og:type" content="article">
-<meta property="og:title" content="C预处理器器">
+<meta property="og:title" content="C预处理器">
 <meta property="og:url" content="http://newyearwang.com/2019/09/21/C预处理器器/index.html">
 <meta property="og:site_name" content="新年的博客">
 <meta property="og:description" content="看着C Primer Plus 第16章，复习一下C预处理这一部分知识。 以前学习C语言的时候，对预处理器这一部分很是瞧不起，这有啥呢，无非就是在编译之前做一下字符串替换而已，没有什么技术含量啊。然而事实上是，技术无论好坏高低，能有效且快速解决各种实际问题的才会最终留到最后，C语言的预处理器就属于这种看起来low，但是实际用处非常大的一种功能。  预处理器不仅仅是做了符号替换，还可以根据要求包含">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-09-21T09:11:20.009Z">
+<meta property="og:updated_time" content="2019-09-21T09:25:43.153Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="C预处理器器">
+<meta name="twitter:title" content="C预处理器">
 <meta name="twitter:description" content="看着C Primer Plus 第16章，复习一下C预处理这一部分知识。 以前学习C语言的时候，对预处理器这一部分很是瞧不起，这有啥呢，无非就是在编译之前做一下字符串替换而已，没有什么技术含量啊。然而事实上是，技术无论好坏高低，能有效且快速解决各种实际问题的才会最终留到最后，C语言的预处理器就属于这种看起来low，但是实际用处非常大的一种功能。  预处理器不仅仅是做了符号替换，还可以根据要求包含">
   <link rel="canonical" href="http://newyearwang.com/2019/09/21/C预处理器器/">
 
@@ -84,7 +84,7 @@
   };
 </script>
 
-  <title>C预处理器器 | 新年的博客</title>
+  <title>C预处理器 | 新年的博客</title>
   
 
 
@@ -248,7 +248,7 @@
       <meta itemprop="name" content="新年的博客">
     </span>
       <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">C预处理器器
+        <h2 class="post-title" itemprop="name headline">C预处理器
 
           
         </h2>
@@ -264,7 +264,7 @@
                 
               
 
-              <time title="创建时间：2019-09-21 17:08:30 / 修改时间：17:11:20" itemprop="dateCreated datePublished" datetime="2019-09-21T17:08:30+08:00">2019-09-21</time>
+              <time title="创建时间：2019-09-21 17:08:30 / 修改时间：17:25:43" itemprop="dateCreated datePublished" datetime="2019-09-21T17:08:30+08:00">2019-09-21</time>
             </span>
           
             
@@ -432,10 +432,13 @@
 </tr>
 </tbody></table>
 <ol start="2">
-<li>#line 和#error</li>
+<li><p>#line 和#error</p>
+<ol>
+<li>指令#line用于重置 <strong>LINE</strong> , <strong>FILE</strong> 报告的行号和文件名。</li>
+<li>指令#error使得预处理器发出一条错误信息，该消息包含指令中的文本。</li>
 </ol>
-<p>#line 指令用于重置 <strong>LINE</strong> , <strong>FILE</strong> 报告的行号和文件名。</p>
-<p>#error 指令使得预处理器发出一条错误信息，该消息包含指令中的文本。</p>
+</li>
+</ol>
 <figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">if</span> __STDC_VERSION__ != 199901L</span></span><br><span class="line">    <span class="meta">#<span class="meta-keyword">error</span> Not C99</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">endif</span></span></span><br></pre></td></tr></table></figure>
 
 <ol start="3">
